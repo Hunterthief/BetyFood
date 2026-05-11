@@ -134,6 +134,7 @@
             <ul class="nav-links">
                 <li><a href="#" class="active" onclick="showPage('home')" data-page="home">الرئيسية</a></li>
                 <li><a href="#" onclick="showPage('discover')" data-page="discover">اكتشف</a></li>
+                <li><a href="#" onclick="showPage('planner')" data-page="planner">المخطط</a></li>
                 <li><a href="#" onclick="showPage('seller')" data-page="seller">للطهاة</a></li>
                 <li><a href="#" onclick="showPage('about')" data-page="about">عن المنصة</a></li>
             </ul>
@@ -155,6 +156,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#" onclick="showPage('home'); toggleMobile();">الرئيسية</a>
         <a href="#" onclick="showPage('discover'); toggleMobile();">اكتشف</a>
+        <a href="#" onclick="showPage('planner'); toggleMobile();">المخطط</a>
         <a href="#" onclick="showPage('seller'); toggleMobile();">للطهاة</a>
         <a href="#" onclick="showPage('about'); toggleMobile();">عن المنصة</a>
     </div>
@@ -370,9 +372,539 @@
         </section>
     </div>
 
+    <!-- DISCOVER PAGE -->
+    <div class="page-section" id="page-discover">
+        <section class="section" style="padding-top: 100px;">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-label">
+                        <i class='bx bx-compass'></i> اكتشف
+                    </div>
+                    <h2 class="section-title">اعثر على وجبتك المثالية</h2>
+                    <p class="section-subtitle">توصيات مدعومة بالذكاء الاصطناعي مصممة حسب ذوقك وحساسيتك وتفضيلاتك</p>
+                </div>
+
+                <!-- AI Recommender Interface -->
+                <div class="recommender-container" style="margin-bottom: 60px;">
+                    <div class="recommender-content">
+                        <h2>🤖 الموصي الذكي</h2>
+                        <p>أخبرنا عن تفضيلاتك، وسيقوم ذكاؤنا الاصطناعي بإيجاد الأطباق المنزلية المثالية لك. يأخذ مطابقنا في الاعتبار حساسيتك، موقعك، عمرك، الحالات الصحية، وتفضيلات الذوق.</p>
+                        <ul class="feature-list">
+                            <li><i class='bx bx-check-circle'></i> <span><strong>واعي بالحساسية:</strong> يرشح الأطباق بناءً على قيودك الغذائية</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span><strong>حسب الموقع:</strong> يجد الطهاة بالقرب منك لتوصيل أسرع</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span><strong>مطابقة الذوق:</strong> يتعلم تفضيلاتك بمرور الوقت</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span><strong>مرتكز على الصحة:</strong> يأخذ في الاعتبار العمر والحالات الصحية</span></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-lg">
+                            <i class='bx bx-sliders-horizontal'></i> تخصيص التفضيلات
+                        </a>
+                    </div>
+
+                    <div class="recommender-visual">
+                        <div class="recommender-mockup">
+                            <div class="recommender-header">
+                                <div class="recommender-ai-badge">
+                                    <i class='bx bx-ai'></i>
+                                </div>
+                                <div class="recommender-header-text">
+                                    <h4>مطابق التفضيلات الذكي</h4>
+                                    <p>اختر تفضيلاتك أدناه</p>
+                                </div>
+                            </div>
+
+                            <p style="font-size: 13px; font-weight: 600; color: var(--text-medium); margin-bottom: 10px;">📍 الموقع</p>
+                            <div class="preference-tags" style="margin-bottom: 16px;">
+                                <span class="pref-tag selected">المعادي</span>
+                                <span class="pref-tag">الزمالك</span>
+                                <span class="pref-tag">مدينة نصر</span>
+                                <span class="pref-tag">مصر الجديدة</span>
+                            </div>
+
+                            <p style="font-size: 13px; font-weight: 600; color: var(--text-medium); margin-bottom: 10px;">🥗 الغذائي</p>
+                            <div class="preference-tags" style="margin-bottom: 16px;">
+                                <span class="pref-tag dietary selected">بدون مكسرات</span>
+                                <span class="pref-tag dietary selected">قليل الصوديوم</span>
+                                <span class="pref-tag dietary">خالي من الغلوتين</span>
+                                <span class="pref-tag dietary">خالي من الألبان</span>
+                            </div>
+
+                            <p style="font-size: 13px; font-weight: 600; color: var(--text-medium); margin-bottom: 10px;">👅 تفضيلات الذوق</p>
+                            <div class="preference-tags" style="margin-bottom: 24px;">
+                                <span class="pref-tag selected">حار</span>
+                                <span class="pref-tag">خفيف</span>
+                                <span class="pref-tag selected">تقليدي</span>
+                                <span class="pref-tag">عصري مدمج</span>
+                            </div>
+
+                            <p style="font-size: 13px; font-weight: 600; color: var(--secondary); margin-bottom: 12px;">✨ توصيات الذكاء الاصطناعي</p>
+                            <div class="rec-results">
+                                <div class="rec-result">
+                                    <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=200&h=200&fit=crop" alt="Food" class="rec-result-img">
+                                    <div class="rec-result-info">
+                                        <div class="rec-result-name">محشي ورق عنب منزلي</div>
+                                        <div class="rec-result-match">95% تطابق • طاهٍ معتمد</div>
+                                    </div>
+                                    <div class="rec-result-price">85 جنيه</div>
+                                </div>
+                                <div class="rec-result">
+                                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&h=200&fit=crop" alt="Food" class="rec-result-img">
+                                    <div class="rec-result-info">
+                                        <div class="rec-result-name">كشري بلدي</div>
+                                        <div class="rec-result-match">88% تطابق • الأعلى تقييماً</div>
+                                    </div>
+                                    <div class="rec-result-price">55 جنيه</div>
+                                </div>
+                                <div class="rec-result">
+                                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=200&h=200&fit=crop" alt="Food" class="rec-result-img">
+                                    <div class="rec-result-info">
+                                        <div class="rec-result-name">ملوخية بالأرز</div>
+                                        <div class="rec-result-match">82% تطابق • قريب</div>
+                                    </div>
+                                    <div class="rec-result-price">70 جنيه</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Order Demo -->
+                <div class="voice-container">
+                    <div class="voice-content">
+                        <h2>🎤 الطلب الصوتي</h2>
+                        <p>يفهم مؤتمت الذكاء الاصطناعي لدينا اللغة الطبيعية. فقط اطلب طلبك باللغة العربية المصرية أو الإنجليزية، وسيقوم نظامنا بالباقي — إيجاد الطاهي، تأكيد التوفر، ومعالجة الدفع.</p>
+                        <ul class="feature-list">
+                            <li><i class='bx bx-check-circle'></i> <span><strong>اللغة الطبيعية:</strong> "عايز 2 كفتة وأرز لبكرة"</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span><strong>متعدد اللغات:</strong> يدعم العربية، الإنجليزية، والفرانكو</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span><strong>متابعة تلقائية:</strong> يتعامل الذكاء الاصطناعي مع التأكيدات والتذكيرات</span></li>
+                            <li><i class='bx bx-check-circle'></i> <span><strong>استبدال ذكي:</strong> يقترح بدائل إذا كان الطبق غير متوفر</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="voice-mockup">
+                        <div class="voice-wave">
+                            <div class="voice-bar" style="animation-delay: 0s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.1s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.2s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.3s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.4s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.5s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.6s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.7s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.8s;"></div>
+                            <div class="voice-bar" style="animation-delay: 0.9s;"></div>
+                            <div class="voice-bar" style="animation-delay: 1.0s;"></div>
+                            <div class="voice-bar" style="animation-delay: 1.1s;"></div>
+                        </div>
+                        <h3>🎙️ الطلب الصوتي نشط</h3>
+                        <p>اطلب طلبك بأي لغة</p>
+
+                        <div class="voice-transcript">
+                            <div class="voice-transcript-label">النص</div>
+                            <div class="voice-transcript-text">
+                                "عايز اتنين محشي ورق عنب من عند أم أحمد، التوصيل للمعادي، البرج 3، بكرة الساعة 2 الظهر."
+                            </div>
+                        </div>
+
+                        <div class="voice-order-card">
+                            <div class="voice-order-icon">
+                                <i class='bx bx-cart'></i>
+                            </div>
+                            <div>
+                                <div class="voice-order-name">الطلب #TST-1247</div>
+                                <div class="voice-order-detail">2x محشي • أم أحمد • بكرة 2 ظهراً</div>
+                            </div>
+                            <div class="voice-order-price">170 جنيه</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- MEAL PLANNER PAGE -->
+    <div class="page-section" id="page-planner">
+        <section class="section planner-section" style="padding-top: 100px;">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-label">
+                        <i class='bx bx-calendar'></i> مخطط الوجبات الأسبوعي
+                    </div>
+                    <h2 class="section-title">خطط أسبوعك بالذكاء الاصطناعي</h2>
+                    <p class="section-subtitle">يقترح الذكاء الاصطناعي وجبات بناءً على تفضيلاتك، أهدافك الغذائية، والطهاة المتاحين</p>
+                </div>
+
+                <div class="planner-grid">
+                    <div class="day-card active" onclick="selectDay(this)">
+                        <div class="day-name">الإثنين</div>
+                        <div class="day-meal-icon">🍲</div>
+                        <div class="day-meal-name">كشري</div>
+                        <div class="day-meal-time">12:30 م</div>
+                    </div>
+                    <div class="day-card" onclick="selectDay(this)">
+                        <div class="day-name">الثلاثاء</div>
+                        <div class="day-meal-icon">🥘</div>
+                        <div class="day-meal-name">ملوخية</div>
+                        <div class="day-meal-time">1:00 م</div>
+                    </div>
+                    <div class="day-card" onclick="selectDay(this)">
+                        <div class="day-name">الأربعاء</div>
+                        <div class="day-meal-icon">🍖</div>
+                        <div class="day-meal-name">كفتة</div>
+                        <div class="day-meal-time">12:00 م</div>
+                    </div>
+                    <div class="day-card" onclick="selectDay(this)">
+                        <div class="day-name">الخميس</div>
+                        <div class="day-meal-icon">🫔</div>
+                        <div class="day-meal-name">محشي</div>
+                        <div class="day-meal-time">1:30 م</div>
+                    </div>
+                    <div class="day-card" onclick="selectDay(this)">
+                        <div class="day-name">الجمعة</div>
+                        <div class="day-meal-icon">🐟</div>
+                        <div class="day-meal-name">سمك</div>
+                        <div class="day-meal-time">2:00 م</div>
+                    </div>
+                    <div class="day-card" onclick="selectDay(this)">
+                        <div class="day-name">السبت</div>
+                        <div class="day-meal-icon">🍗</div>
+                        <div class="day-meal-name">فتة</div>
+                        <div class="day-meal-time">1:00 م</div>
+                    </div>
+                    <div class="day-card" onclick="selectDay(this)">
+                        <div class="day-name">الأحد</div>
+                        <div class="day-meal-icon">🍰</div>
+                        <div class="day-meal-name">بسبوسة</div>
+                        <div class="day-meal-time">4:00 م</div>
+                    </div>
+                </div>
+
+                <div class="planner-detail">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=400&fit=crop" alt="Koshary" class="planner-detail-img">
+                    <div class="planner-detail-info">
+                        <h3>الإثنين: كشري بلدي</h3>
+                        <p>كشري مصري أصيل مع بصل مقرمش perfectly، صلصة طماطم حارة، ودكة منزلية الصنع. من إعداد أم حسن — تقييم 4.9/5 من 234 عميل.</p>
+                        <div class="planner-detail-tags">
+                            <span class="planner-tag nutrition">520 سعر حراري</span>
+                            <span class="planner-tag nutrition">عالي الألياف</span>
+                            <span class="planner-tag time">التحضير: 45 دقيقة</span>
+                            <span class="planner-tag serves">يكفي 2-3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="food-price" style="font-size: 36px; margin-bottom: 16px;">55 جنيه <span>/ حصة</span></div>
+                        <a href="#" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+                            <i class='bx bx-cart-add'></i> أضف للطلب
+                        </a>
+                        <a href="#" class="btn btn-outline btn-lg" style="width: 100%; justify-content: center; margin-top: 10px;">
+                            <i class='bx bx-heart'></i> احفظ لوقت لاحق
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AI Assistant Feature -->
+                <div style="margin-top: 60px; background: var(--navy); border-radius: var(--radius-xl); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h3 style="color: white; font-size: 28px; margin-bottom: 16px;">🤖 مساعد الطعام الذكي</h3>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 15px; line-height: 1.7; margin-bottom: 24px;">
+                            يساعدك مساعد الذكاء الاصطناعي لدينا في تخطيط الوجبات، يقترح بدائل، يتتبع التغذية، وحتى يذكرك بالطلب قبل أن ينفد مخزون طاهيك المفضل.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 14px;">
+                                <i class='bx bx-check-circle' style="color: var(--secondary); font-size: 20px;"></i>
+                                اقتراحات وجبات ذكية بناءً على جدولك
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 14px;">
+                                <i class='bx bx-check-circle' style="color: var(--secondary); font-size: 20px;"></i>
+                                تتبع التغذية وتنبيهات الصحة
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 14px;">
+                                <i class='bx bx-check-circle' style="color: var(--secondary); font-size: 20px;"></i>
+                                إعادة الطلب التلقائي للمفضلة
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); font-size: 14px;">
+                                <i class='bx bx-check-circle' style="color: var(--secondary); font-size: 20px;"></i>
+                                مجموعات وجبات صديقة للميزانية
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.06); border-radius: var(--radius-lg); padding: 28px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                            <div style="width: 36px; height: 36px; border-radius: 10px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">
+                                <i class='bx bx-ai'></i>
+                            </div>
+                            <span style="color: white; font-weight: 600; font-size: 15px;">مساعد BetyFood الذكي</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px;">
+                            <p style="color: rgba(255,255,255,0.9); font-size: 14px; line-height: 1.6;">
+                                "بناءً على تفضيلاتك، لقد خططت لأسبوع متوازن مع أطباق مصرية تقليدية. كشري الإثنين يوفر أليافاً رائعة، ومحشي الخميس مثالي لعشاء العائلة. 🍽️"
+                            </p>
+                        </div>
+                        <div style="background: rgba(212, 114, 78, 0.15); border-radius: var(--radius-md); padding: 16px;">
+                            <p style="color: var(--primary); font-size: 14px; font-weight: 600;">
+                                💡 نصيحة: محشي أم أحمد متاح غداً. هل تريد أن أحجز لك حصتين؟
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SELLER HUB PAGE -->
+    <div class="page-section" id="page-seller">
+        <section class="section dashboard-section">
+            <div class="section-container">
+                <div class="dashboard-header">
+                    <div>
+                        <h2 style="font-size: 32px; color: var(--navy);">لوحة تحكم الطاهي</h2>
+                        <p style="color: var(--text-light); font-size: 15px;">مرحباً بعودتك، أم أحمد! إليك نظرتك العامة.</p>
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        <button class="btn btn-outline btn-sm">
+                            <i class='bx bx-bell'></i> الإشعارات
+                        </button>
+                        <button class="btn btn-primary btn-sm">
+                            <i class='bx bx-plus'></i> أضف طبق جديد
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="dash-stat">
+                        <div class="dash-stat-icon"><i class='bx bx-shopping-bag'></i></div>
+                        <div class="dash-stat-value">24</div>
+                        <div class="dash-stat-label">الطلبات هذا الأسبوع</div>
+                        <div class="dash-stat-change up"><i class='bx bx-trending-up'></i> +18%</div>
+                    </div>
+                    <div class="dash-stat">
+                        <div class="dash-stat-icon"><i class='bx bx-wallet'></i></div>
+                        <div class="dash-stat-value">3,240</div>
+                        <div class="dash-stat-label">الإيرادات (جنيه)</div>
+                        <div class="dash-stat-change up"><i class='bx bx-trending-up'></i> +24%</div>
+                    </div>
+                    <div class="dash-stat">
+                        <div class="dash-stat-icon"><i class='bx bx-star'></i></div>
+                        <div class="dash-stat-value">4.9</div>
+                        <div class="dash-stat-label">متوسط التقييم</div>
+                        <div class="dash-stat-change up"><i class='bx bx-trending-up'></i> +0.2</div>
+                    </div>
+                    <div class="dash-stat">
+                        <div class="dash-stat-icon"><i class='bx bx-group'></i></div>
+                        <div class="dash-stat-value">156</div>
+                        <div class="dash-stat-label">العملاء الدائمين</div>
+                        <div class="dash-stat-change up"><i class='bx bx-trending-up'></i> +12</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3 class="dash-card-title">الطلبات الأخيرة</h3>
+                            <button class="btn btn-ghost btn-sm">عرض الكل <i class='bx bx-left-arrow-alt'></i></button>
+                        </div>
+
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=200&h=200&fit=crop" alt="Food" class="order-img">
+                            <div class="order-info">
+                                <div class="order-name">محشي ورق عنب</div>
+                                <div class="order-detail">2 حصة • المعادي • اليوم 2:00 م</div>
+                            </div>
+                            <span class="order-status preparing">قيد التحضير</span>
+                        </div>
+
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=200&h=200&fit=crop" alt="Food" class="order-img">
+                            <div class="order-info">
+                                <div class="order-name">كفتة بلدي</div>
+                                <div class="order-detail">3 حصة • مدينة نصر • غداً 1:00 م</div>
+                            </div>
+                            <span class="order-status pending">معلق</span>
+                        </div>
+
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=200&h=200&fit=crop" alt="Food" class="order-img">
+                            <div class="order-info">
+                                <div class="order-name">ملوخية بالأرز</div>
+                                <div class="order-detail">1 حصة • الزمالك • اليوم 6:00 م</div>
+                            </div>
+                            <span class="order-status delivered">تم التوصيل</span>
+                        </div>
+
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1519676867240-fb8a883dc6d8?w=200&h=200&fit=crop" alt="Food" class="order-img">
+                            <div class="order-info">
+                                <div class="order-name">بسبوسة</div>
+                                <div class="order-detail">1 صينية • مصر الجديدة • أمس</div>
+                            </div>
+                            <span class="order-status delivered">تم التوصيل</span>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3 class="dash-card-title">إجراءات سريعة</h3>
+                        </div>
+
+                        <div class="quick-action">
+                            <div class="quick-action-icon"><i class='bx bx-plus-circle'></i></div>
+                            <div>
+                                <div class="quick-action-text">أضف طبق جديد</div>
+                                <div class="quick-action-desc">ارفع صورة وحدد السعر</div>
+                            </div>
+                        </div>
+
+                        <div class="quick-action">
+                            <div class="quick-action-icon"><i class='bx bx-calendar'></i></div>
+                            <div>
+                                <div class="quick-action-text">حدد التوفر</div>
+                                <div class="quick-action-desc">أدر جدولك الزمني</div>
+                            </div>
+                        </div>
+
+                        <div class="quick-action">
+                            <div class="quick-action-icon"><i class='bx bx-message-rounded-dots'></i></div>
+                            <div>
+                                <div class="quick-action-text">رسائل العملاء</div>
+                                <div class="quick-action-desc">3 رسائل غير مقروءة</div>
+                            </div>
+                        </div>
+
+                        <div class="quick-action">
+                            <div class="quick-action-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                            <div>
+                                <div class="quick-action-text">عرض التحليلات</div>
+                                <div class="quick-action-desc">بيانات المبيعات والأداء</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px; padding: 20px; background: var(--primary-light); border-radius: var(--radius-md); text-align: center;">
+                            <i class='bx bx-bulb' style="font-size: 24px; color: var(--primary);"></i>
+                            <p style="font-size: 14px; font-weight: 600; color: var(--navy); margin-top: 8px;">نصيحة الذكاء الاصطناعي</p>
+                            <p style="font-size: 13px; color: var(--text-medium); margin-top: 4px;">
+                                محشيك هو الرائج! فكر في زيادة التوفر لطلبات الخميس العائلية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div class="page-section" id="page-about">
+        <section class="section" style="padding-top: 100px;">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-label">
+                        <i class='bx bx-info-circle'></i> عن BetyFood
+                    </div>
+                    <h2 class="section-title">الجسر بين المطبخ والعميل</h2>
+                    <p class="section-subtitle">تمكين الطهاة المنزليين المصريين من خلال التكنولوجيا والثقة والمجتمع</p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto 60px;">
+                    <div style="background: var(--white); border-radius: var(--radius-xl); padding: 48px; box-shadow: var(--shadow-md);">
+                        <h3 style="font-size: 24px; color: var(--navy); margin-bottom: 20px;">مهمتنا</h3>
+                        <p style="font-size: 16px; color: var(--text-medium); line-height: 1.8; margin-bottom: 24px;">
+                            ولدت BetyFood من ملاحظة بسيطة: الطهاة المنزليون المصريون يخلقون طعاماً رائعاً، لكنهم يكافحون للتواصل مع العملاء في العصر الرقمي. تستخدم منصتنا الذكاء الاصطناعي لحل ثلاث تحديات حاسمة — <strong style="color: var(--primary);">فجوات المعرفة الرقمية</strong>، <strong style="color: var(--primary);">عجز الثقة</strong>، و<strong style="color: var(--primary);">عوائق الدفع</strong> — التي تعيق آلاف الطهاة الموهوبين.
+                        </p>
+                        <p style="font-size: 16px; color: var(--text-medium); line-height: 1.8; margin-bottom: 24px;">
+                            من خلال العمل كـ <strong>مطابق</strong>، <strong>مؤتمت</strong>، <strong>محلل</strong>، و<strong>موصي</strong>، ينشئ نظام الذكاء الاصطناعي لدينا جسراً سلساً بين المطابخ المنزلية والعملاء الجائعين. نتحقق من البائعين، نؤتمت إدارة الطلبات، نحلل جودة الطعام، ونخصص التوصيات — كل ذلك مع احترام التراث الثقافي للطبخ المنزلي المصري.
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px;">
+                            <div style="text-align: center; padding: 24px; background: var(--cream); border-radius: var(--radius-md);">
+                                <div style="font-size: 36px; margin-bottom: 12px;">👩‍</div>
+                                <div style="font-size: 28px; font-weight: 700; color: var(--navy); font-family: 'Tajawal', serif;">+2,500</div>
+                                <div style="font-size: 13px; color: var(--text-light);">طاهٍ منزلي</div>
+                            </div>
+                            <div style="text-align: center; padding: 24px; background: var(--cream); border-radius: var(--radius-md);">
+                                <div style="font-size: 36px; margin-bottom: 12px;">🍽️</div>
+                                <div style="font-size: 28px; font-weight: 700; color: var(--navy); font-family: 'Tajawal', serif;">+50,000</div>
+                                <div style="font-size: 13px; color: var(--text-light);">وجبة موصلة</div>
+                            </div>
+                            <div style="text-align: center; padding: 24px; background: var(--cream); border-radius: var(--radius-md);">
+                                <div style="font-size: 36px; margin-bottom: 12px;">⭐</div>
+                                <div style="font-size: 28px; font-weight: 700; color: var(--navy); font-family: 'Tajawal', serif;">4.9/5</div>
+                                <div style="font-size: 13px; color: var(--text-light);">معدل الرضا</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Problem We Solve -->
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h3 style="font-size: 28px; color: var(--navy); text-align: center; margin-bottom: 32px;">التحديات التي نعالجها</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--primary);">
+                            <div style="font-size: 32px; margin-bottom: 16px;">📱</div>
+                            <h4 style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px;">فجوة المعرفة الرقمية</h4>
+                            <p style="font-size: 14px; color: var(--text-medium); line-height: 1.6;">يفتقر العديد من الطهاة المنزليين إلى المهارات في التسويق الرقمي، التحليلات، وإدارة الأعمال عبر الإنترنت. يتعامل مؤتمت الذكاء الاصطناعي لدينا مع هذه المهام المعقدة.</p>
+                        </div>
+
+                        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--secondary);">
+                            <div style="font-size: 32px; margin-bottom: 16px;">🤝</div>
+                            <h4 style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px;">عجز الثقة</h4>
+                            <p style="font-size: 14px; color: var(--text-medium); line-height: 1.6">يقلق المشترون بشأن سلامة الطعام والأصالة. يتحقق محللنا من الجودة، ويربط مطابقنا البائعين الموثوقين بالعملاء.</p>
+                        </div>
+
+                        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--gold);">
+                            <div style="font-size: 32px; margin-bottom: 16px;">💳</div>
+                            <h4 style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px;">عوائق الدفع</h4>
+                            <p style="font-size: 14px; color: var(--text-medium); line-height: 1.6">الدفع عند الاستلام محفوف بالمخاطر للبائعين. ندمج المحافظ المحمولة (InstaPay، Vodafone Cash) للدفع الآمن والفوري.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- Footer -->
     <footer class="footer" style="background: var(--navy); color: rgba(255,255,255,0.7); padding: 80px 0 40px;">
         <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>🍽️ BetyFood</h3>
+                    <p>ربط الطهاة المنزليين المصريين بالجيران الجائعين من خلال التطابق المؤتمت بالذكاء الاصطناعي، والأتمتة، وتقنية بناء الثقة.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>المنصة</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('discover')">اكتشف الوجبات</a></li>
+                        <li><a href="#" onclick="showPage('planner')">مخطط الوجبات</a></li>
+                        <li><a href="#" onclick="showPage('seller')">لوحة تحكم البائع</a></li>
+                        <li><a href="#">الطلب الصوتي</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ميزات الذكاء الاصطناعي</h4>
+                    <ul>
+                        <li><a href="#">المطابق الذكي</a></li>
+                        <li><a href="#">المؤتمت الذكي</a></li>
+                        <li><a href="#">المحلل الذكي</a></li>
+                        <li><a href="#">الموصي الذكي</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>الدعم</h4>
+                    <ul>
+                        <li><a href="#">مركز المساعدة</a></li>
+                        <li><a href="#">إرشادات السلامة</a></li>
+                        <li><a href="#">طرق الدفع</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
             <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08);">
                 <span>© 2025 BetyFood. جميع الحقوق محفوظة.</span>
                 <span style="display: block; margin-top: 8px;">صنع بـ ❤️ في الاسكندرية، مصر</span>
